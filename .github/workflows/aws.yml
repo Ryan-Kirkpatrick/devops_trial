@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION: ap
+  AWS_REGION: ap-southeast-2
   ECR_REPOSITORY: devops_test
   ECS_SERVICE: devops_test
   ECS_CLUSTER: devops_test
