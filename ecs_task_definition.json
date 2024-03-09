@@ -1,5 +1,4 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:902569056731:task-definition/devops_test_task_defintion2:1",
     "containerDefinitions": [
         {
             "name": "devops_test_image",
@@ -10,12 +9,6 @@
                     "name": "devops_test_image-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
-                    "protocol": "tcp"
-                },
-                {
-                    "name": "devops_test_image-8080-tcp",
-                    "containerPort": 8080,
-                    "hostPort": 8080,
                     "protocol": "tcp"
                 }
             ],
@@ -41,40 +34,8 @@
     "family": "devops_test_task_defintion2",
     "executionRoleArn": "arn:aws:iam::902569056731:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-        }
-    ],
     "placementConstraints": [],
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
@@ -84,7 +45,5 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-03-09T02:44:26.326Z",
-    "registeredBy": "arn:aws:iam::902569056731:root",
     "tags": []
 }
