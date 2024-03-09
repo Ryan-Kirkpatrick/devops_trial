@@ -3,8 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Successful response.');
+  res.send('OMG!!!!!');
 });
 
-app.listen(80, () => {console.log("Running on localhost:80.")});
-app.listen(443, () => {console.log("Running on localhost:433.")});
+app.listen(8080, () => {console.log("Running on localhost:8080")});

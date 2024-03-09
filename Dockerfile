@@ -32,7 +32,7 @@ USER node
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 80
+EXPOSE 8080
 
 # Run the application.
-CMD sudo apt-get install libcap2-bin && sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\`` && node App.js
+CMD node App.js
