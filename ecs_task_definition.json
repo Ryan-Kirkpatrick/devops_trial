@@ -1,17 +1,22 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:902569056731:task-definition/devops_test_task_definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:902569056731:task-definition/devops_test_task_defintion2:1",
     "containerDefinitions": [
         {
             "name": "devops_test_image",
-            "image": "902569056731.dkr.ecr.ap-southeast-2.amazonaws.com/devops_test_repo:latest",
+            "image": "902569056731.dkr.ecr.ap-southeast-2.amazonaws.com/devops_test_repo",
             "cpu": 0,
             "portMappings": [
                 {
                     "name": "devops_test_image-80-tcp",
-                    "containerPort": 8080,
+                    "containerPort": 80,
                     "hostPort": 80,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
+                    "protocol": "tcp"
+                },
+                {
+                    "name": "devops_test_image-8080-tcp",
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp"
                 }
             ],
             "essential": true,
@@ -24,8 +29,8 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/",
-                    "awslogs-region": "us-east-2",
+                    "awslogs-group": "/ecs/devops_test_task_defintion2",
+                    "awslogs-region": "ap-southeast-2",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
@@ -33,7 +38,7 @@
             "systemControls": []
         }
     ],
-    "family": "devops_test_task_definition",
+    "family": "devops_test_task_defintion2",
     "executionRoleArn": "arn:aws:iam::902569056731:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -79,7 +84,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-03-09T01:18:51.865Z",
+    "registeredAt": "2024-03-09T02:44:26.326Z",
     "registeredBy": "arn:aws:iam::902569056731:root",
     "tags": []
 }
